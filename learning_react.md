@@ -23,3 +23,10 @@
   
 2. react1.html
   -ReactDOM.render(화면에 출력하고 싶은 html, 그 JSX를 렌더링해 보여줄 DOM 안의 위치);
+
+
+2020.08.19.수 chap3. 리액트 컴포넌트
+
+1. react2.html
+
+2. react3.html
