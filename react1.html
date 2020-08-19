@@ -4,16 +4,28 @@
 <head>
     <meta charset="utf-8">
     <title>React! React! React!</title>
-    <script src="https://unpkg.com/react@16/umd/react.development.js"></script> //리액트 라이브러리
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> //DOM작업에 필요한 기능 추가
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script> //바벨이라는 자바스트립트 컵파일러 참조(JSX를 자바스크립트로 변환)
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script> <!리액트 라이브러리>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> <!DOM작업에 필요한 기능 추가>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script> <!바벨이라는 자바스트립트 컵파일러 참조(JSX를 자바스크립트로 변환)>
+    
+    <style>
+        #container {
+            padding: 50px;
+            background-color: #EEE; }
+        #container h1 {
+            font-size: 144px;
+            font-family: sans-serif;
+            color: #0080A8;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="container"></div> <!render 메소드가 사용할 목적지 역할>
     <script type="text/babel">
         ReactDOM.render(
             <h1>Choi Chanmi</h1>,
-            document.body
+            document.querySelector("#container")
         );
     </script>
 </body>
