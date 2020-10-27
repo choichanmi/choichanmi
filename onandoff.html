@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main_css.css">
+    </head>
+
+    <body onLoad="init()">
+        <div id="wrapper">
+            <header id="main_header">
+                <h1>은혜의 교회 또래청 온앤오프 데이트  <image src="꽃.png" style="width:80px; height: 60px;"></image></h1>
+            </header>
+            <section id="main_section">
+                <article>
+                    <header>
+                            <h1>또래마블</h1>
+                            <br>
+                    </header>
+                    <figure style="text-align: center;">
+                        <image src="또래마블.png" style="width:600px; height: 400px;" id="보드"></image>
+                        <image src="말1.png" id="말1"></image>
+                        <image src="말2.png" id="말2"></image>
+                        <image src="말3.png" id="말3"></image>
+                    </figure>
+                </article>
+            </section>
+            <section id="main_aside">
+                <h1>주사위 던지기</h1>
+                <br>
+                <image src="주사위.png" style="width:200px; height: 180px; margin:15px;"></image>
+                <form name = "square" method="post">
+                    <input type="text" id="txt1" style="width:50px; height:25px;"></input>
+                    <input type = "button" onClick="makeNum1()" value = "1조던지기" style="width:150px; height:30px;"></input>
+                    <input type="text" id="txt2" style="width:50px; height:25px;"></input>
+                    <input type = "button" onClick="makeNum2()" value = "2조던지기" style="width:150px; height:30px;"></input>
+                    <input type="text" id="txt3" style="width:50px; height:25px;"></input>
+                    <input type = "button" onClick="makeNum3()" value = "3조던지기" style="width:150px; height:30px;"></input>                     
+                    
+                </form>   
+            </section>
+        <footer id="main_footer">
+            <input type = "button" onClick= "q1()" value = "질문1" style="width:70px; height:50px; margin:5px;"></input>
+            <input type = "button" onClick= "q2()" value = "질문2" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q3()" value = "질문3" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q4()" value = "질문4" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q5()" value = "질문5" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q6()" value = "질문6" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q7()" value = "질문7" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q8()" value = "질문8" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q9()" value = "질문9" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q10()" value = "질문10" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "m1()" value = "미션1" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q11()" value = "질문11" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q12()" value = "질문12" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q13()" value = "질문13" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q14()" value = "질문14" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q15()" value = "질문15" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q16()" value = "질문16" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q17()" value = "질문17" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "m2()" value = "미션2" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q18()" value = "질문18" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q19()" value = "질문19" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q20()" value = "질문20" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q21()" value = "질문21" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q22()" value = "질문22" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q23()" value = "질문23" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q24()" value = "질문24" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q25()" value = "질문25" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "m3()" value = "미션3" style="width:70px; height:50px; margin:5px;""></input>
+            <input type = "button" onClick= "q26()" value = "미션26" style="width:70px; height:50px; margin:5px;""></input>
+        </footer>
+        </div>
+        <script type= "text/javascript" charset="UTF-8">
+            
+            var leftsize = ["610px","550px","490px","430px","370px","310px","250px","190px","130px","70px","70px","70px","70px","70px","70px","70px",
+            "130px","190px","250px","310px","370px","430px","490px","590px","610px","610px","610px","610px","610px","610px"];
+            var topsize = ["600px","600px","600px","600px","600px","600px","600px","600px","600px","600px","540px","480px","420px","370px","310px",
+            "250px","250px","250px","250px","250px","250px","250px","250px","250px","250px","310px","370px","420px","480px","540px"];
+            var state1=0;
+            var state2=0;
+            var state3=0;
+            var group1;
+            var group2;
+            var group3;
+            var txt1;
+            var txt2;
+            var txt3;
+
+            function init(){
+                group1=document.getElementById("말1");
+                group2=document.getElementById("말2");
+                group3=document.getElementById("말3");
+                txt1=document.getElementById("txt1");
+                txt2=document.getElementById("txt2");
+                txt3=document.getElementById("txt3");
+            }
+
+            function makeNum1() {
+                var randnum1=Math.floor(Math.random()*6)+1;
+                
+                state1+=randnum1;
+                txt1.value=state1;
+                group1.style.top=topsize[state1];
+                group1.style.left=leftsize[state1];
+                alert(randnum1+"칸!");
+            }
+
+            function makeNum2() {
+                var randnum2=Math.floor(Math.random()*6)+1;
+                
+                state2+=randnum2;
+                txt2.value=state2;
+                group2.style.tope=topsize[state2];
+                group2.style.left=leftsize[state2];
+                alert(randnum2+"칸!");
+            }
+
+            function makeNum3() {
+                var randnum3=Math.floor(Math.random()*6)+1;
+                
+                state3+=randnum3;
+                txt3.value=state3;
+                group3.style.top=topsize[state3];
+                group3.style.left=leftsize[state3];
+                alert(randnum3+"칸!");
+            }
+
+            function q1() {
+                alert("요즘 당신의 관심사는 무엇인가요?");
+            }
+            function q2() {
+                alert("여가 시간을 보내는 가장 좋은 방법은?");
+            }
+            function q3() {
+                alert("요즘 당신의 관심사는 무엇인가요?");
+            }
+            function q4() {
+                alert("내가 가장 좋아하는 과목 and 싫어하는 과목은?");
+            }
+            function q5() {
+                alert("최근에 가장 기뻤던 날은 언제 인가요?");
+            }
+            function q6() {
+                alert("내가 가장 좋아하는 영화는?");
+            }
+            function q7() {
+                alert("나의 매력 하나를 말한다면?");
+            }
+            function q8() {
+                alert("나의 이상형은 어떤 사람인가요?");
+            }
+            function q9() {
+                alert("나를 맛으로 표현한다면 어떤 맛인가요?");
+            }
+            function q10() {
+                alert("나를 색으로 표현한다면 어떤 색인가요?");
+            }
+            function q11() {
+                alert("만났던 사람 중에 가장 유명한 사람은? ");
+            }
+            function q12() {
+                alert("꼭 만나보고 싶은 사람이 있다면?");
+            }
+            function q13() {
+                alert("나의 좌우명,혹은 나만의 신념, 가장 중요하게 생각하는 가치가 있다면?");
+            }
+            function q14() {
+                alert("요즘 나의 가장 큰 불만거리는 무엇인가요?");
+            }
+            function q15() {
+                alert("내가 종종 느끼지만 표현하지 않는 감정은?");
+            }
+            function q16() {
+                alert("다른 사람에게 들은 말 중에서 가장 듣기 좋았던 말은?");
+            }
+            function q17() {
+                alert("당신에게 조언자는 누구인가요?");
+            }
+            function q18() {
+                alert("어린 시절에 누렸던 것 중 가장 그리운 것은?");
+            }
+            function q19() {
+                alert("과거로 돌아 갈수 있다면 언제로 돌아가고 싶나요?");
+            }
+            function q20() {
+                alert("인생에서 다시 살고 싶은 날이 있다면? 그 이유는?");
+            }
+            function q21() {
+                alert("내가 살면서 해본 가장 큰 모험은 무엇인가요?");
+            }
+            function q22() {
+                alert("세 가지 소원을 빌 수 있다면 무엇을 빌고 싶나요?");
+            }
+            function q23() {
+                alert("어느 날 내가 세계적인 명성을 얻을 수 있다면어떤 영역(분야)에서 얻고 싶나요? 그 이유는?");
+            }
+            function q24() {
+                alert("갑자기 눈이 안 보인다면 무엇을 가장 보고 싶을 것 같나요?");
+            }
+            function q25() {
+                alert("갑자기 눈이 안 보인다면 무엇을 가장 보고 싶을 것 같나요?");
+            }
+            function q26() {
+                alert("지금부터 10년,20년,30년 후 당신의 삶은 어떤 모습이라고 생각하나요?");
+            }
+            function m1() {
+                alert("서로의 첫인상을 이야기하기");
+            }
+            function m2() {
+                alert("서로를 한 단어로 표현하기");
+            }
+            function m3() {
+                alert("서로에게 칭찬 한 가지씩 해주기");
+            }
+        </script>
+
+    </body>
+</html>
